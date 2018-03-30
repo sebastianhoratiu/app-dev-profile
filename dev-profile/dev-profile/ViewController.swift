@@ -9,15 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var profileLogo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        formatProfileLogo()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func formatProfileLogo() {
+//        this seem to do the same as Clip to Bounds in IB
+//        profileLogo.layer.masksToBounds = true
+        profileLogo.layer.cornerRadius = 7
     }
 
 
